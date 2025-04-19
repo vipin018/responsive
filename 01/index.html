@@ -1,13 +1,50 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>01</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+  <div id="main"
+   class="w-full h-screen bg-[#DDD7D0] uppercase relative font-poppins ">
+    <img class="hidden w-full h-full object-cover absolute top-0 left-0 bg-center
+    
+    " src="/public/image.png" alt="">
+    <nav class=" flex justify-between items-center p-8 absolute top-0 left-0 w-full">
+      <h1 class="text-4xl font-semibold bg-black text-white px-4 py-2 rounded-md rounded-t-full rounded-br-full">SF.
+      </h1>
+      <div class="flex gap-4">
+        <ul class="flex gap-4">
+          <li class="text-sm font-medium">Home</li>
+          <li class="text-sm font-medium">About</li>
+          <li class="text-sm font-medium">Works</li>
+          <li class="text-sm font-medium">Contact</li>
+        </ul>
+      </div>
+    </nav>
+    <div id="text" class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <h4 class="text-xl text-[#ff6f00] font-semibold
+      lg:text-4xl
+      ">let's do something</h4>
+      <h1 class="text-7xl font-semibold
+      lg:text-9xl
+      ">Creative</h1>
+      <div class="flex gap-4 mt-4">
+        <button class="bg-[#ff6f00] text-white px-6 py-2 rounded-lg text-center font-semibold hover:bg-[#ff6f00]/80 transition-all duration-300">Contact</button>
+        <button class="bg-[#e8e6e3] text-black px-6 py-2 rounded-lg text-center font-semibold hover:bg-[#e8e6e3]/80 transition-all duration-300">Explore</button>
+      </div>
+    </div>
+</body>
+
+</html>
+</div>
+
+<script type="module" src="/main.js"></script>
+</body>
+
 </html>
