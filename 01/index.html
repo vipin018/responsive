@@ -1,50 +1,63 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>01</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Creative Landing</title>
+
+  <!-- ✅ Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ✅ Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- ✅ GSAP & SplitText -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
 
-<body>
+<body class="overflow-hidden">
 
-  <div id="main"
-   class="w-full h-screen bg-[#DDD7D0] uppercase relative font-poppins ">
-    <img class="hidden w-full h-full object-cover absolute top-0 left-0 bg-center
-    
-    " src="/public/image.png" alt="">
-    <nav class=" flex justify-between items-center p-8 absolute top-0 left-0 w-full">
-      <h1 class="text-4xl font-semibold bg-black text-white px-4 py-2 rounded-md rounded-t-full rounded-br-full">SF.
-      </h1>
-      <div class="flex gap-4">
-        <ul class="flex gap-4">
-          <li class="text-sm font-medium">Home</li>
-          <li class="text-sm font-medium">About</li>
-          <li class="text-sm font-medium">Works</li>
-          <li class="text-sm font-medium">Contact</li>
-        </ul>
-      </div>
+  <div id="main" class="w-full h-screen bg-[#DDD7D0] uppercase relative font-poppins">
+    <!-- Background Image -->
+    <img src="/public/image4.jpg" alt="" class="absolute top-0 left-0 w-full h-full object-cover" />
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center p-8 absolute top-0 left-0 w-full z-20">
+      <h1
+        class="text-4xl font-semibold bg-black text-white px-3 py-2 lg:px-6 lg:py-3 rounded-md rounded-br-full rounded-tr-full">
+        SF</h1>
+      <ul class="flex gap-4 text-sm font-medium">
+        <li class="hover:text-[#ff6f00] transition duration-100 cursor-pointer">Home</li>
+        <li class="hover:text-[#ff6f00] transition duration-100 cursor-pointer">About</li>
+        <li class="hover:text-[#ff6f00] transition duration-100 cursor-pointer">Works</li>
+        <li class="hover:text-[#ff6f00] transition duration-100 cursor-pointer">Contact</li>
+      </ul>
     </nav>
-    <div id="text" class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-      <h4 class="text-xl text-[#ff6f00] font-semibold
-      lg:text-4xl
-      ">let's do something</h4>
-      <h1 class="text-7xl font-semibold
-      lg:text-9xl
-      ">Creative</h1>
-      <div class="flex gap-4 mt-4">
-        <button class="bg-[#ff6f00] text-white px-6 py-2 rounded-lg text-center font-semibold hover:bg-[#ff6f00]/80 transition-all duration-300">Contact</button>
-        <button class="bg-[#e8e6e3] text-black px-6 py-2 rounded-lg text-center font-semibold hover:bg-[#e8e6e3]/80 transition-all duration-300">Explore</button>
+
+    <!-- Hero Section -->
+    <div
+      class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:flex lg:flex-col lg:items-start lg:gap-4 lg:top-[50%] lg:left-[50%] ">
+      <h4 class="text-xl text-[#ff6f00] font-semibold lg:text-4xl lg:tracking-wider">let's do something</h4>
+      <h1 id="text" class="overflow-hidden text-6xl font-semibold italic lg:text-[9rem] lg:tracking-wider">Creative</h1>
+
+      <!-- Buttons -->
+      <div
+        class="flex gap-4 mt-4 items-center lg:flex-row lg:items-end lg:gap-8 lg:mt-0 lg:absolute lg:bottom-[-30%] lg:left-[60%]">
+        <button
+          class="bg-transparent  border-black border-2 text-black px-10 py-2 rounded-lg text-center font-semibold hover:bg-[#2E2E2E] hover:text-white hover:border-none transition-all duration-300">Explore</button>
       </div>
     </div>
-</body>
+  </div>
 
-</html>
-</div>
-
-<script type="module" src="/main.js"></script>
+  <!-- Your main JS -->
+  <script type="module" src="/main.js"></script>
 </body>
 
 </html>
