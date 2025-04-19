@@ -43,15 +43,17 @@
 
     <!-- Hero Section -->
     <div
-      class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:flex lg:flex-col lg:items-start lg:gap-4 lg:top-[50%] lg:left-[50%] ">
-      <h4 class="text-xl text-[#ff6f00] font-semibold lg:text-4xl lg:tracking-wider">let's do something</h4>
-      <h1 id="text" class="overflow-hidden text-6xl font-semibold italic lg:text-[9rem] lg:tracking-wider">Creative</h1>
+      class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:flex w-full p-12 lg:flex-col lg:items-start lg:gap-4 lg:top-[50%] lg:left-[50%] ">
+      <h4 class="text-lg text-[#ff6f00]  font-semibold lg:text-4xl lg:tracking-wider">let's do something</h4>
+      <h1 id="text" class=" text-6xl font-semibold italic lg:text-[9rem] lg:tracking-wider">Creative</h1>
 
       <!-- Buttons -->
       <div
         class="flex gap-4 mt-4 items-center lg:flex-row lg:items-end lg:gap-8 lg:mt-0 lg:absolute lg:bottom-[-30%] lg:left-[60%]">
-        <button
-          class="bg-transparent  border-black border-2 text-black px-10 py-2 rounded-lg text-center font-semibold hover:bg-[#2E2E2E] hover:text-white hover:border-none transition-all duration-300">Explore</button>
+        <button id="magneticBtn"
+  class="bg-transparent border border-black text-black px-10 py-2 rounded-lg text-center font-semibold transition-all duration-300 relative overflow-hidden z-10">
+  <span class="relative z-20 pointer-events-none">Explore</span>
+</button>
       </div>
     </div>
   </div>

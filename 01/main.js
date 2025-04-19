@@ -14,7 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
   
     // Navbar hover text anim
     const navLinks = document.querySelectorAll('nav ul li');
-  
     navLinks.forEach(link => {
       const split = new SplitText(link, { type: 'chars' });
   
@@ -44,5 +43,39 @@ window.addEventListener('DOMContentLoaded', () => {
         });
       });
     });
+  
+    // ✅ Magnetic Button Fix
+    const btn = document.getElementById("magneticBtn");
+  
+    if (btn) {
+      btn.addEventListener("mousemove", (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+  
+        gsap.to(btn, {
+          x: x * 0.3,
+          y: y * 0.3,
+          duration: 0.4,
+          ease: "power3.out"
+        });
+      });
+  
+      btn.addEventListener("mouseleave", () => {
+        gsap.to(btn, {
+          x: 0,
+          y: 0,
+          duration: 0.6,
+          ease: "elastic.out(1, 0.4)"
+        });
+      });
+    }
+  });
+  
+  // 🔥 Parallax Image
+  document.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 30;
+    const y = (e.clientY / window.innerHeight - 0.5) * 30;
+    document.querySelector('img').style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
   });
   
